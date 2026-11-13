@@ -29,6 +29,68 @@
         "bootloader": true,
         "tx_outside_amateur_bands": false
       }
+    },
+    {
+      "input": {
+        "file": "705E140.dat",
+        "md5": "2c9c1d7f3fc80ef173e01d841cd1248a",
+        "radio": "IC-705",
+        "region": "E",
+        "version": "1.40"
+      },
+      "release": {
+        "name": "705E140_trv14d",
+        "patch_file": "705E140_trv14d.json",
+        "patch_sha256": "af577cb6905fedae87178359fb9a1cb5722b80c2d7cf68ada1265f6d5265fe6a",
+        "label": "1.4D",
+        "date": "2026-11-13",
+        "title": "IC-705 E 1.40 + transverter support 1.4D",
+        "description": "IC-705 E1.40 + TRV 1.4D + A/B bootloader (as tested)",
+        "features": [
+          "Transverter support: 8 slots (TRV1\u2013TRV8, RF / IF), RF shown on the display up to 122 GHz",
+          "CI-V frequency read/write in RF terms",
+          "TRV menu on the radio",
+          "Per-transverter maximum TX power and TX delay (up to 300 ms, all modes)",
+          "Custom A/B bootloader: hold POWER at power-on until the LED blinks (~3 s) to boot the other firmware slot",
+          "Opening screen shows 'customized by Dawid SQ6EMM'",
+          "Extended TX ranges and 4 m (70 MHz) TX from the E base build"
+        ],
+        "output_md5": "4010322349883b6cd60d3ddde30a2c66",
+        "output_main_md5": "f2ee0e781a027fc0f38e440589e706e2",
+        "bootloader": true,
+        "tx_outside_amateur_bands": true
+      }
+    },
+    {
+      "input": {
+        "file": "705J140.dat",
+        "md5": "b605171288db4a74e0992a8f2afcb1c3",
+        "radio": "IC-705",
+        "region": "J",
+        "version": "1.40"
+      },
+      "release": {
+        "name": "705J140_trv14d_wb",
+        "patch_file": "705J140_trv14d_wb.json",
+        "patch_sha256": "96f2a7c04df483b730f15fffc8c628dbe7cdd82b20207ef1f0463dbeecc371d6",
+        "label": "1.4D J (wideband)",
+        "date": "2026-11-13",
+        "title": "IC-705 J 1.40 + transverter support 1.4D (wideband)",
+        "description": "IC-705 J1.40 + TRV 1.4D (TX delay fix, A/B bootloader, wideband TX)",
+        "features": [
+          "Transverter support: 8 slots (TRV1\u2013TRV8, RF / IF), RF shown on the display up to 122 GHz",
+          "CI-V frequency read/write in RF terms",
+          "TRV menu on the radio",
+          "Per-transverter maximum TX power and TX delay (up to 300 ms, all modes)",
+          "Custom A/B bootloader: hold POWER at power-on until the LED blinks (~3 s) to boot the other firmware slot",
+          "Opening screen shows 'customized by Dawid SQ6EMM'",
+          "Extended TX ranges: 1.6\u201354, 68\u201374.8, 118\u2013174, 400\u2013470 MHz"
+        ],
+        "output_md5": "130a2b6abf245c031f1715c1213d2702",
+        "output_main_md5": "a3b91986818242a15196a9dd41566c36",
+        "bootloader": true,
+        "tx_outside_amateur_bands": true
+      }
     }
   ]
 }

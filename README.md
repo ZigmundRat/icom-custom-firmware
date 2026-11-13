@@ -16,8 +16,11 @@ latest release.
 | Official file | Release | Output MD5 |
 |---|---|---|
 | IC-9700 `9700E150.dat` (`6f04fd2248ba39254ed01b30b52ce36a`) | 1.6c — TRV + A/B bootloader | `1a9d78b5a6295b8217d7cbe26c02d728` |
+| IC-705 `705E140.dat` (`2c9c1d7f3fc80ef173e01d841cd1248a`) | 1.4D — TRV + A/B bootloader, extended TX ranges | `4010322349883b6cd60d3ddde30a2c66` |
+| IC-705 `705J140.dat` (`b605171288db4a74e0992a8f2afcb1c3`) | 1.4D J — TRV + A/B bootloader, extended TX ranges | `130a2b6abf245c031f1715c1213d2702` |
 
-IC-705 E/J releases will follow after hardware verification.
+The IC-705 releases extend the TX frequency ranges beyond the amateur bands. You alone are
+responsible for transmitting only where your licence and national regulations allow.
 
 ## Command line
 

@@ -33,12 +33,19 @@
       },
       "patch": "705E140_trv14d.json",
       "release": "1.4D",
-      "date": "",
+      "date": "2026-11-13",
       "title": "IC-705 E 1.40 + transverter support 1.4D",
-      "features": [],
-      "status": "pending",
-      "_build": "705E14D_trvdly.dat md5 4010322349883b6cd60d3ddde30a2c66 (embeds the A/B bootloader)",
-      "tx_outside_amateur_bands": false
+      "features": [
+        "Transverter support: 8 slots (TRV1–TRV8, RF / IF), RF shown on the display up to 122 GHz",
+        "CI-V frequency read/write in RF terms",
+        "TRV menu on the radio",
+        "Per-transverter maximum TX power and TX delay (up to 300 ms, all modes)",
+        "Custom A/B bootloader: hold POWER at power-on until the LED blinks (~3 s) to boot the other firmware slot",
+        "Opening screen shows 'customized by Dawid SQ6EMM'",
+        "Extended TX ranges and 4 m (70 MHz) TX from the E base build"
+      ],
+      "status": "active",
+      "tx_outside_amateur_bands": true
     },
     {
       "input": {
@@ -50,11 +57,18 @@
       },
       "patch": "705J140_trv14d_wb.json",
       "release": "1.4D J (wideband)",
-      "date": "",
+      "date": "2026-11-13",
       "title": "IC-705 J 1.40 + transverter support 1.4D (wideband)",
-      "features": [],
-      "status": "pending",
-      "_build": "705J14D_trvdly_wb.dat (not yet built)",
+      "features": [
+        "Transverter support: 8 slots (TRV1–TRV8, RF / IF), RF shown on the display up to 122 GHz",
+        "CI-V frequency read/write in RF terms",
+        "TRV menu on the radio",
+        "Per-transverter maximum TX power and TX delay (up to 300 ms, all modes)",
+        "Custom A/B bootloader: hold POWER at power-on until the LED blinks (~3 s) to boot the other firmware slot",
+        "Opening screen shows 'customized by Dawid SQ6EMM'",
+        "Extended TX ranges: 1.6–54, 68–74.8, 118–174, 400–470 MHz"
+      ],
+      "status": "active",
       "tx_outside_amateur_bands": true
     }
   ]
