@@ -7,6 +7,9 @@ firmware in the radio and lets you switch back.
 
 **Web patcher:** https://sq6emm.github.io/icom-custom-firmware/
 
+**Discussion, questions and reports:** the official place is the forum thread
+https://mikrofale.cafe/showthread.php?tid=1296
+
 No Icom firmware is distributed here. You download the official `.dat` from Icom yourself;
 the patcher (running entirely in your browser — the file never leaves your computer) applies
 the patch and offers the result **only if it is byte-identical to the build that was tested**
