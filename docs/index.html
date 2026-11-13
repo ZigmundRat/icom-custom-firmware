@@ -54,7 +54,28 @@
       <li>The display shows the real RF frequency, up to 122&nbsp;GHz, in the radio's normal frequency style.</li>
       <li>CI-V reports and accepts the RF frequency, so logging and control software sees the microwave frequency, not the IF.
         Above 1.4&nbsp;GHz the CI-V frequency uses the 6-byte format, as on the IC-905.</li>
-      <li><strong>IC-9700:</strong> IF on 2&nbsp;m, 70&nbsp;cm or 23&nbsp;cm, applied to both MAIN and SUB. Menu: SET &gt; Transverter.</li>
+      <li><strong>IC-9700:</strong> IF on 2&nbsp;m, 70&nbsp;cm or 23&nbsp;cm. Menu: SET &gt; Transverter.</li>
+    </ul>
+
+    <h3>IC-9700: MAIN / SUB, DUAL watch and SAT mode</h3>
+    <ul>
+      <li>The active transverter is chosen <strong>separately for MAIN and SUB</strong> (SET &gt; Transverter &gt; MAIN Active /
+        SUB Active), e.g. MAIN = 10&nbsp;GHz via 144&nbsp;MHz and SUB = 24&nbsp;GHz via 432&nbsp;MHz. A receiver shows its RF only
+        while its frequency is in that transverter's IF band.</li>
+      <li><strong>DUAL watch:</strong> both readouts show their own RF frequency at the same time.</li>
+      <li><strong>MAIN/SUB exchange:</strong> the transverter selection moves together with the bands, because each
+        transverter is wired to its band's antenna connector.</li>
+      <li><strong>Transmit settings</strong> (power limit, TX delay, PTT inhibit) follow the receiver that transmits:
+        <strong>MAIN Active</strong> in normal operation, <strong>SUB Active in SAT mode</strong> (the IC-9700 transmits on SUB in
+        satellite mode). Switching SAT mode on or off does not swap the selections.</li>
+    </ul>
+
+    <h3>Scope: finer vertical scale</h3>
+    <ul>
+      <li>Scope Set &gt; <strong>Scope dB/div</strong>: 10 (stock), 6, 3 or 1&nbsp;dB per division for the spectrum and the waterfall,
+        to see weak signals. At 6/3/1&nbsp;dB the noise floor is found automatically and placed about one division above the
+        bottom (separately for MAIN and SUB on the IC-9700); REF shifts the picture up or down.</li>
+      <li>The scope data sent over CI-V / LAN / WLAN to PC software is unchanged.</li>
     </ul>
 
     <h3>Transmit control per transverter</h3>

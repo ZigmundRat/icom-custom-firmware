@@ -193,6 +193,6 @@ for (const f of readdirSync(patchDir).filter((f) => f.endsWith('.json')).sort())
 }
 
 test('a patch refuses another radio\'s official file', { skip: !(OFFICIAL['9700E150.dat'] && OFFICIAL['705E140.dat']) && 'official files not present' }, () => {
-  const p9700 = JSON.parse(readFileSync(join(patchDir, '9700E150_trv16c.json'), 'utf8'));
+  const p9700 = JSON.parse(readFileSync(join(patchDir, readdirSync(patchDir).find((f) => f.startsWith('9700E150_') && f.endsWith('.json'))), 'utf8'));
   assert.throws(() => buildPatched(load('705E140.dat'), p9700), (e) => e instanceof PatchError && e.code === 'wrong_input');
 });
