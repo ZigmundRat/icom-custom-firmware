@@ -115,3 +115,7 @@ th { color: var(--muted); font-weight: 600; }
   dt { margin-top: 6px; }
   .hash.small { font-size: 0.75em; }
 }
+.about h3 { font-size: 1rem; margin: 1.2em 0 0.3em; }
+.about ul { margin: 0.3em 0; padding-left: 1.2em; }
+.about li + li { margin-top: 0.3em; }
+.about p { margin: 0.4em 0; }

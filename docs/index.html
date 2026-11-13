@@ -41,6 +41,50 @@
     </ul>
   </section>
 
+  <section class="card about" aria-labelledby="about-h">
+    <h2 id="about-h">About this firmware</h2>
+    <p>These releases are built for <strong>microwave transverter operation</strong>: the radio works as the IF rig for an
+      external transverter (for example 10, 24, 47, 76 or 122 GHz). It shows and reports the real microwave frequency, and it
+      can adapt its transmit behaviour to each transverter.</p>
+
+    <h3>Transverter support (TRV1&ndash;TRV8)</h3>
+    <ul>
+      <li>Up to eight transverters. For each one you set the RF frequency (on the microwave band) and the IF frequency (the
+        band the radio actually tunes). Select the active transverter in the radio's menu; the settings are kept after power-off.</li>
+      <li>The display shows the real RF frequency, up to 122&nbsp;GHz, in the radio's normal frequency style.</li>
+      <li>CI-V reports and accepts the RF frequency, so logging and control software sees the microwave frequency, not the IF.
+        Above 1.4&nbsp;GHz the CI-V frequency uses the 6-byte format, as on the IC-905.</li>
+      <li><strong>IC-9700:</strong> IF on 2&nbsp;m, 70&nbsp;cm or 23&nbsp;cm, applied to both MAIN and SUB. Menu: SET &gt; Transverter.</li>
+    </ul>
+
+    <h3>Transmit control per transverter</h3>
+    <ul>
+      <li><strong>Maximum TX power</strong> (100 / 50 / 25 / 10 / 5&nbsp;%). It protects the transverter input from overdrive and never
+        raises power above the radio's own setting.</li>
+      <li><strong>TX delay</strong> up to 300&nbsp;ms in all modes. RF output is held back after the SEND line switches, so the
+        sequencer, coax relays and PA have time to switch before drive is applied.</li>
+      <li><strong>PTT inhibit</strong> (IC-9700). Transmission is blocked completely for a transverter that is used for receive only.</li>
+      <li>When no transverter is active, the radio transmits exactly like the original firmware.</li>
+    </ul>
+
+    <h3>Extended TX frequency ranges (IC-705)</h3>
+    <p>Many microwave transverters use local oscillators whose IF does not fall on the radio's standard amateur-band TX
+      segments, or they use an IF on another band. That is why the IC-705 releases extend the radio's TX ranges, so that such an
+      IF can be used. These ranges exist for driving a transverter. You alone are responsible for transmitting only where your
+      licence and national regulations allow.</p>
+
+    <h3>Safe updates: A/B bootloader</h3>
+    <p>The radio keeps both the new and the previous firmware. If a new version does not work, you can switch back without tools:</p>
+    <ul>
+      <li><strong>IC-9700:</strong> hold POWER while connecting the DC supply (about 5&nbsp;s).</li>
+      <li><strong>IC-705:</strong> hold POWER at power-on until the LED blinks (about 3&nbsp;s).</li>
+    </ul>
+    <p>A slot that is structurally damaged is detected, and the radio falls back to the other slot automatically.</p>
+
+    <h3>Before you connect a transverter</h3>
+    <p>On a dummy load, measure the SEND-to-RF delay (with a scope) and the output power for every transverter slot you plan to use.</p>
+  </section>
+
   <section class="card" aria-labelledby="step1-h">
     <h2 id="step1-h"><span class="step">1</span> Choose your official firmware file</h2>
     <p class="muted">Download the firmware from Icom's website yourself, unzip it, and select the <code>.dat</code> file here.</p>
