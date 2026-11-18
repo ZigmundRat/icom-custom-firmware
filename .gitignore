@@ -2,6 +2,8 @@
 *.dat
 *.pdf
 *.zip
+!docs/apps/
+!docs/apps/*.zip
 decoded_firmware/
 decompressed/
 out/

@@ -18,8 +18,8 @@ latest release.
 
 | Official file | Release | Output MD5 |
 |---|---|---|
-| IC-9700 `9700E150.dat` (`6f04fd2248ba39254ed01b30b52ce36a`) | 20261113v3 — TRV per MAIN/SUB (DUAL, SAT), scope dB/div, SD apps, A/B bootloader | `51e9d2da39790357f220f3bea3fe4879` |
-| IC-705 `705E140.dat` (`2c9c1d7f3fc80ef173e01d841cd1248a`) | 20261113v1 — TRV, scope dB/div, SD apps, A/B bootloader, extended TX ranges | `1a4577ca926089198bcdf63155ac7410` |
+| IC-9700 `9700E150.dat` (`6f04fd2248ba39254ed01b30b52ce36a`) | 20261118v4 — TRV per MAIN/SUB (DUAL, SAT), scope dB/div, A/B bootloader, ICAP decoders (Q65/FT8/JT4/PI4/WSPR) + PSKReporter | `6537230ca70eb423e1014224a4898a8d` |
+| IC-705 `705E140.dat` (`2c9c1d7f3fc80ef173e01d841cd1248a`) | 20261118v4 — TRV, scope dB/div, A/B bootloader, extended TX ranges, ICAP decoders + PSKReporter | `1ec999401f694518014557ea69a4f8d4` |
 | IC-705 `705J140.dat` (`b605171288db4a74e0992a8f2afcb1c3`) | 20261113v1 — TRV, scope dB/div, A/B bootloader, extended TX ranges | `d7a7f87b9b16f262b188fe3735b3682b` |
 
 The IC-705 releases extend the TX frequency ranges beyond the amateur bands. You alone are
