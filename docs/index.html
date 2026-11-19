@@ -196,13 +196,16 @@
     radio's <code>Apps</code> folder on the SD card (<code>\IC-705\Apps\</code> or <code>\IC-9700\Apps\</code>),
     then open <em>MENU &gt; SET &gt; Apps</em>.</p>
     <ul class="apps-dl">
-      <li><a href="apps/ICAP-apps-705E-20261118v4.zip" download>IC-705 E &mdash; SD-apps bundle (20261118v4)</a></li>
-      <li><a href="apps/ICAP-apps-9700-20261118v4.zip" download>IC-9700 &mdash; SD-apps bundle (20261118v4)</a></li>
+      <li><a href="apps/ICAP-apps-705E-20261119v8.zip" download>IC-705 E &mdash; SD-apps bundle (20261119v8, for firmware 20261119v8)</a></li>
+      <li><a href="apps/ICAP-apps-9700-20261119v8.zip" download>IC-9700 &mdash; SD-apps bundle (20261119v8, for firmware 20261119v6)</a></li>
     </ul>
-    <p class="muted"><strong>PSKReporter:</strong> decodes are reported automatically only after you set your own callsign
+    <p class="muted"><strong>PSKReporter:</strong> decodes are reported automatically (UDP to report.pskreporter.info) only after you set your own callsign
     and Maidenhead locator on the radio and it has network &mdash; the firmware itself carries no personal data.
-    <strong>Beacon TX</strong> inside the apps is experimental and off by default (enabled via the app's <code>.CFG</code>);
-    on-radio button activation comes in a later release. These apps are the project's own code (MIT), not Icom software.</p>
+    <strong>Beacon:</strong> in a decoder mode, a <em>long press</em> of the mode tile in the emission popup arms or disarms a
+    period-aligned beacon (DE &lt;call&gt; &lt;locator&gt;); while it is armed a red frame marks the main-screen emission
+    button. Test transmissions on a dummy load first. The <code>.BIN</code> files are tied to the matching firmware &mdash;
+    always copy the whole bundle (IC-9700: then power-cycle the radio). These apps are the project's own code (MIT),
+    not Icom software.</p>
   </section>
 
   <section class="card cols" aria-labelledby="how-h">

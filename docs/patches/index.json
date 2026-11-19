@@ -10,13 +10,13 @@
         "version": "1.50"
       },
       "release": {
-        "name": "9700E150_20261118v4",
-        "patch_file": "9700E150_20261118v4.json",
-        "patch_sha256": "56a8865f35a2621eca03adac254269c9cbd62d309e11a14e28c2b3fe720390e8",
-        "label": "20261118v4",
-        "date": "2026-11-18",
-        "title": "IC-9700 E 1.50 + transverter + ICAP decoders & PSKReporter (20261118v4)",
-        "description": "IC-9700 E1.50 custom 20261118v4 (ICAP: decoders + PSKReporter)",
+        "name": "9700E150_20261119v6",
+        "patch_file": "9700E150_20261119v6.json",
+        "patch_sha256": "828dbc7557f9871a21ddfa47b366f828a397488c5d1a2c938ea02afe880fc6aa",
+        "label": "20261119v6",
+        "date": "2026-11-19",
+        "title": "IC-9700 E 1.50 + transverter + ICAP decoders, on-radio beacon & PSKReporter (20261119v6, apps 20261119v8)",
+        "description": "IC-9700 E1.50 custom 20261119v6 (ICAP: decoders, beacons; PSKReporter fixed in the SD runtime files)",
         "features": [
           "Transverter support: 8 slots (TRV1\u2013TRV8, RF / IF on 2 m, 70 cm or 23 cm), RF shown up to 122 GHz",
           "Separate active transverter for MAIN and SUB (SET > Transverter > MAIN Active / SUB Active); DUAL watch shows each receiver's own RF",
@@ -27,14 +27,15 @@
           "Scope Set > Scope dB/div: 10 / 6 / 3 / 1 dB per division for spectrum and waterfall, noise floor anchored automatically (MAIN and SUB independently)",
           "SD-card apps: MENU > SET > Apps (\\IC-9700\\Apps\\)",
           "Custom A/B bootloader: hold POWER while connecting DC (~5 s) to boot the other firmware slot",
-          "Opening screen shows 'customized by Dawid SQ6EMM - 20261118v4'; the radio's version text stays official 1.50",
-          "SD-card decoder apps (ICAP): Q65, FT8, JT4 and PI4 digital-mode decoders on the DECODE screen, WSJT-X-style output (plus a WSPR decoder)",
-          "Automatic PSKReporter spotting: every decode is reported when your own callsign and locator are set on the radio (the firmware carries no personal data; spot frequency is the true on-air RF, transverter-aware)",
-          "Experimental period-aligned beacon TX inside the decoder apps - for now enabled via the app's .CFG file; on-radio button activation comes in a later release",
-          "Download the matching SD-apps bundle on the patcher page and copy it to the radio's \\Apps\\ folder"
+          "Opening screen shows 'customized by Dawid SQ6EMM - 20261119v6'; the radio's version text stays official 1.50",
+          "SD-card decoder apps (ICAP): Q65, FT8, JT4, PI4 and WSPR on the DECODE screen, WSJT-X-style output",
+          "Automatic PSKReporter spotting (fixed in this release - earlier releases never actually sent): every decode is reported when your own callsign and locator are set on the radio and it has network (the firmware carries no personal data; spot frequency is the true on-air RF, transverter-aware)",
+          "On-radio beacon: in a decoder mode, a LONG press of the mode tile in the emission popup arms / disarms a period-aligned beacon (DE <call> <locator>); while armed, a red rounded frame marks the main-screen emission button",
+          "Download the matching SD-apps bundle 20261119v8 on the patcher page and copy it to the radio's \\Apps\\ folder (the .BIN files must come from the same bundle)",
+          "The SD runtime (ICAPRT/ICAPTX/ICAPSPOT.BIN in the apps bundle) is updated separately from the firmware image: copy all three together and power-cycle"
         ],
-        "output_md5": "6537230ca70eb423e1014224a4898a8d",
-        "output_main_md5": "bd5dfd4316bd876a857d9bfbf4ee369e",
+        "output_md5": "2b4fa5295e4a9323baf0ff9b023755f2",
+        "output_main_md5": "9d43c0a0467baa1819f929ab6c08fd9d",
         "bootloader": true,
         "tx_outside_amateur_bands": false
       }
@@ -48,29 +49,29 @@
         "version": "1.40"
       },
       "release": {
-        "name": "705E140_20261118v4",
-        "patch_file": "705E140_20261118v4.json",
-        "patch_sha256": "56fa343a48b2ea00ce636ad64d146bf88df79776c5489b9d608cc7c1d226bcd0",
-        "label": "20261118v4",
-        "date": "2026-11-18",
-        "title": "IC-705 E 1.40 + transverter + ICAP decoders & PSKReporter (20261118v4)",
-        "description": "IC-705 E1.40 custom 20261118v4 (ICAP: decoders + PSKReporter)",
+        "name": "705E140_20261119v8",
+        "patch_file": "705E140_20261119v8.json",
+        "patch_sha256": "887d4d9b571832d30d6bf02a18eb2d9fde6d92d6a772b8b83e3c7bc587d21613",
+        "label": "20261119v8",
+        "date": "2026-11-19",
+        "title": "IC-705 E 1.40 + transverter + ICAP decoders, on-radio beacon & PSKReporter (20261119v8)",
+        "description": "IC-705 E1.40 custom 20261119v8 (ICAP: decoders, on-radio beacon with red frame, working PSKReporter)",
         "features": [
           "Transverter support: 8 slots (TRV1\u2013TRV8, RF / IF), RF shown on the display up to 122 GHz",
           "CI-V frequency read/write in RF terms",
           "Per-transverter maximum TX power and TX delay (up to 300 ms, all modes)",
           "Scope Set > Scope dB/div: 10 / 6 / 3 / 1 dB per division for spectrum and waterfall, noise floor anchored automatically",
           "Custom A/B bootloader: hold POWER at power-on until the LED blinks (~3 s) to boot the other firmware slot",
-          "Opening screen shows 'customized by Dawid SQ6EMM - 20261118v4'; the radio's version text stays official",
+          "Opening screen shows 'customized by Dawid SQ6EMM - 20261119v8'; the radio's version text stays official",
           "SD-card apps: MENU > SET > Apps (\\IC-705\\Apps\\)",
           "Extended TX ranges and 4 m (70 MHz) TX from the E base build",
-          "SD-card decoder apps (ICAP): Q65, FT8, JT4 and PI4 digital-mode decoders on the DECODE screen, WSJT-X-style output (plus a WSPR decoder)",
-          "Automatic PSKReporter spotting: every decode is reported when your own callsign and locator are set on the radio (the firmware carries no personal data; spot frequency is the true on-air RF, transverter-aware)",
-          "Experimental period-aligned beacon TX inside the decoder apps - for now enabled via the app's .CFG file; on-radio button activation comes in a later release",
-          "Download the matching SD-apps bundle on the patcher page and copy it to the radio's \\Apps\\ folder"
+          "SD-card decoder apps (ICAP): Q65, FT8, JT4, PI4 and WSPR on the DECODE screen, WSJT-X-style output",
+          "Automatic PSKReporter spotting (fixed in this release - earlier releases never actually sent): every decode is reported when your own callsign and locator are set on the radio and it has network (the firmware carries no personal data; spot frequency is the true on-air RF, transverter-aware)",
+          "On-radio beacon: in a decoder mode, a LONG press of the mode tile in the emission popup arms / disarms a period-aligned beacon (DE <call> <locator>); while armed, a red rounded frame marks the main-screen emission button",
+          "Download the matching SD-apps bundle 20261119v8 on the patcher page and copy it to the radio's \\Apps\\ folder (the .BIN files must come from the same bundle)"
         ],
-        "output_md5": "1ec999401f694518014557ea69a4f8d4",
-        "output_main_md5": "3ed2d1c402074c40905ade9c8783e91a",
+        "output_md5": "629dff4d1ab8c721ec7c2755633db2f5",
+        "output_main_md5": "13b956a2b958be7ccfa51f4011584616",
         "bootloader": true,
         "tx_outside_amateur_bands": true
       }
