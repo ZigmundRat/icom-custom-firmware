@@ -28,7 +28,7 @@
           "SD-card apps: MENU > SET > Apps (\\IC-9700\\Apps\\)",
           "Custom A/B bootloader: hold POWER while connecting DC (~5 s) to boot the other firmware slot",
           "Opening screen shows 'customized by Dawid SQ6EMM - 20261119v6'; the radio's version text stays official 1.50",
-          "SD-card decoder apps (ICAP): Q65, FT8, JT4, PI4 and WSPR on the DECODE screen, WSJT-X-style output",
+          "SD-card decoder apps (ICAP): Q65, FT8, JT4 and PI4 on the DECODE screen, WSJT-X-style output; WSPR-2 as a beacon-only app",
           "Automatic PSKReporter spotting (fixed in this release - earlier releases never actually sent): every decode is reported when your own callsign and locator are set on the radio and it has network (the firmware carries no personal data; spot frequency is the true on-air RF, transverter-aware)",
           "On-radio beacon: in a decoder mode, a LONG press of the mode tile in the emission popup arms / disarms a period-aligned beacon (DE <call> <locator>); while armed, a red rounded frame marks the main-screen emission button",
           "Download the matching SD-apps bundle 20261119v8 on the patcher page and copy it to the radio's \\Apps\\ folder (the .BIN files must come from the same bundle)",
@@ -65,7 +65,7 @@
           "Opening screen shows 'customized by Dawid SQ6EMM - 20261119v8'; the radio's version text stays official",
           "SD-card apps: MENU > SET > Apps (\\IC-705\\Apps\\)",
           "Extended TX ranges and 4 m (70 MHz) TX from the E base build",
-          "SD-card decoder apps (ICAP): Q65, FT8, JT4, PI4 and WSPR on the DECODE screen, WSJT-X-style output",
+          "SD-card decoder apps (ICAP): Q65, FT8, JT4 and PI4 on the DECODE screen, WSJT-X-style output; WSPR-2 as a beacon-only app",
           "Automatic PSKReporter spotting (fixed in this release - earlier releases never actually sent): every decode is reported when your own callsign and locator are set on the radio and it has network (the firmware carries no personal data; spot frequency is the true on-air RF, transverter-aware)",
           "On-radio beacon: in a decoder mode, a LONG press of the mode tile in the emission popup arms / disarms a period-aligned beacon (DE <call> <locator>); while armed, a red rounded frame marks the main-screen emission button",
           "Download the matching SD-apps bundle 20261119v8 on the patcher page and copy it to the radio's \\Apps\\ folder (the .BIN files must come from the same bundle)"
