@@ -49,7 +49,8 @@ How to use it:
    - CQ: keep holding until the frame turns green.
    - QSO: tap a decoded line, wait about 1 s, tap the `TX?` line. One message per tap. PTT, EXIT or TRANSMIT stop at once.
 5. APRS: set GPS TX Mode to APRS, tune an FM channel (e.g. 144.800 MHz in Europe), set the interval in GPS Auto TX;
-   the beacon needs a valid position (GPS or manual).
+   the beacon needs a valid position (GPS or manual). Turn **NR (Noise Reduction) off** on that receiver: NR distorts
+   the AFSK tones and nothing is decoded.
 6. QSOs are appended to `Apps\ICAPQSO.ADI` (ADIF). Spots go to PSKReporter automatically when call, locator and
    network are set.
 
