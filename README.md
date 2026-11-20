@@ -20,12 +20,12 @@ latest release.
 |---|---|---|
 | IC-9700 `9700E150.dat` (`6f04fd2248ba39254ed01b30b52ce36a`) | 20261119v14 (install together with SD apps 20261119v14) — TRV per MAIN/SUB (DUAL, SAT) with per-transverter ATT / P.AMP, scope dB/div, A/B bootloader, ICAP decoders (Q65/FT8/JT4/PI4/WSPR), beacon, QSO mode (FT8/Q65/JT4), APRS GPS TX mode, PSKReporter | `348d1d6118c94e05df0b3027f2dbd103` |
 | IC-705 `705E140.dat` (`2c9c1d7f3fc80ef173e01d841cd1248a`) | 20261119v14 (with SD apps 20261119v14) — TRV with per-transverter ATT / P.AMP, scope dB/div, A/B bootloader, extended TX ranges, ICAP decoders, beacon, QSO mode (FT8/Q65/JT4), APRS GPS TX mode, PSKReporter | `70af0dea75a3b6cc3c555cbe35d21c36` |
-| IC-705 `705J140.dat` (`b605171288db4a74e0992a8f2afcb1c3`) | 20261113v1 — TRV, scope dB/div, A/B bootloader, extended TX ranges | `d7a7f87b9b16f262b188fe3735b3682b` |
+| IC-705 `705J140.dat` (`b605171288db4a74e0992a8f2afcb1c3`) | 20261119v14 (with SD apps 20261119v14 for J) — same features as the E release (TRV with per-transverter ATT / P.AMP, scope dB/div, A/B bootloader, extended TX ranges, ICAP decoders, beacon, QSO mode, APRS GPS TX mode, PSKReporter); installation confirmed on an IC-705 J | `1084dcdc5180e561394a50759725f04a` |
 
 The IC-705 releases extend the TX frequency ranges beyond the amateur bands. You alone are
 responsible for transmitting only where your licence and national regulations allow.
 
-## Release 20261119v14 (IC-705 E, IC-9700)
+## Release 20261119v14 (IC-705 E, IC-705 J, IC-9700)
 
 What is new since 20261119v13:
 - **QSO mode verified on the IC-705 E and the IC-9700** (FT8, Q65, JT4). A tap on the `TX?` line that comes too
@@ -63,6 +63,7 @@ APRS® is a registered trademark of APRS Software and Bob Bruninga, WB4APR.
 ```sh
 python3 icom_patch.py patches/9700E150_20261119v14.json 9700E150.dat 9700_20261119v14.dat
 python3 icom_patch.py patches/705E140_20261119v14.json 705E140.dat 705E_20261119v14.dat
+python3 icom_patch.py patches/705J140_20261119v14.json 705J140.dat 705J_20261119v14.dat
 ```
 
 ## Before you use it
