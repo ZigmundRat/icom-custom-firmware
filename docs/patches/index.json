@@ -118,7 +118,7 @@
           "Custom A/B bootloader: hold POWER at power-on until the LED blinks (~3 s) to boot the other firmware slot",
           "Opening screen shows 'customized by Dawid SQ6EMM - 20261119v14'; the radio's version text stays official",
           "SD-card apps: MENU > SET > Apps (\\IC-705\\Apps\\)",
-          "Extended TX limits: 1.6\u201354, 68\u201374.8, 118\u2013174, 400\u2013470 MHz are allowed by the firmware, but on an IC-705 J the 2 m band gives NO output power above 146.000 MHz (known, not fixed yet); the other extended ranges have not been measured on a J radio",
+          "Extended TX: HF transmit is unlocked and verified on an IC-705 J (6 m not measured yet). 2 m / 70 cm: on the Japanese version the transmit limit is set by the hardware - the radio gives NO output power above 146.000 MHz, and neither this firmware nor the known version-diode modifications open 2 m / 70 cm TX beyond the Japanese band plan (the diodes widen only RX there)",
           "SD-card decoder apps (ICAP): Q65, FT8, JT4, PI4 and WSPR on the DECODE screen, WSJT-X-style output",
           "Automatic PSKReporter spotting: every decode is reported when your own callsign and locator are set on the radio and it has network (the firmware carries no personal data; spot frequency is the true on-air RF, transverter-aware)",
           "On-radio beacon: in a decoder mode, a LONG press of the mode tile in the emission popup arms / disarms a period-aligned beacon (DE <call> <locator>); while armed, a red rounded frame marks the main-screen emission button",
