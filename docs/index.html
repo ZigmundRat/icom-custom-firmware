@@ -189,23 +189,48 @@
   </section>
 
   <section class="card" aria-labelledby="apps-h">
-    <h2 id="apps-h">SD-card decoder apps (optional)</h2>
-    <p>The ICAP releases can run digital-mode decoder apps from the SD card: <strong>Q65, FT8, JT4</strong> and <strong>PI4</strong>
-    decoders, shown on the radio's DECODE screen (WSJT-X-style output), plus a <strong>WSPR</strong> beacon. They are optional &mdash; the
-    firmware works without them. To install, download the bundle for your radio, unzip it and copy the files into the
-    radio's <code>Apps</code> folder on the SD card (<code>\IC-705\Apps\</code> or <code>\IC-9700\Apps\</code>),
-    then open <em>MENU &gt; SET &gt; Apps</em>.</p>
+    <h2 id="apps-h">SD-card apps: decoders, beacon, QSO mode, APRS</h2>
+    <p>The ICAP releases run digital-mode apps from the SD card: <strong>Q65, FT8, JT4, PI4</strong> and <strong>WSPR</strong>
+    decoders on the radio's DECODE screen (WSJT-X-style output), a beacon, QSO mode and PSKReporter spotting. They are optional &mdash;
+    the firmware works without them. The firmware image and the bundle belong together: use the bundle with the same release number.</p>
     <ul class="apps-dl">
-      <li><a href="apps/ICAP-apps-705E-20261119v8.zip" download>IC-705 E &mdash; SD-apps bundle (20261119v8, for firmware 20261119v8)</a></li>
-      <li><a href="apps/ICAP-apps-9700-20261119v8.zip" download>IC-9700 &mdash; SD-apps bundle (20261119v8, for firmware 20261119v6)</a></li>
+      <li><a href="apps/ICAP-apps-705E-20261119v14.zip" download>IC-705 E &mdash; SD-apps bundle 20261119v14 (for firmware 20261119v14 only)</a></li>
+      <li><a href="apps/ICAP-apps-9700-20261119v14.zip" download>IC-9700 &mdash; SD-apps bundle 20261119v14 (for firmware 20261119v14 only)</a></li>
     </ul>
-    <p class="muted"><strong>PSKReporter:</strong> decodes are reported automatically (UDP to report.pskreporter.info) only after you set your own callsign
-    and Maidenhead locator on the radio and it has network &mdash; the firmware itself carries no personal data.
-    <strong>Beacon:</strong> in a decoder mode, a <em>long press</em> of the mode tile in the emission popup arms or disarms a
-    period-aligned beacon (DE &lt;call&gt; &lt;locator&gt;); while it is armed a red frame marks the main-screen emission
-    button. Test transmissions on a dummy load first. The <code>.BIN</code> files are tied to the matching firmware &mdash;
-    always copy the whole bundle (IC-9700: then power-cycle the radio). These apps are the project's own code (MIT),
-    not Icom software.</p>
+
+    <h3>New in 20261119v14</h3>
+    <ul>
+      <li><strong>QSO mode verified on the IC-705 E and the IC-9700.</strong> A tap on the <code>TX?</code> line that comes too early is no longer
+        ignored silently: the screen shows <code>QSO: wait 1 s, tap again</code>.</li>
+      <li><strong>Longer hold for CQ:</strong> the time between the red (beacon) and the green (CQ) frame is about three times longer,
+        so CQ is not armed by accident.</li>
+      <li><strong>TX refused: &lt;reason&gt;</strong> on the DECODE screen names the condition that blocks a transmission.</li>
+      <li><strong>APRS</strong> in the firmware: <em>MENU &gt; SET &gt; GPS &gt; GPS TX Mode</em> has a 4th choice <em>APRS</em> (next to D-PRS / NMEA):
+        position beacon as 1200 Bd AFSK on the current frequency, FM only; received APRS stations go to the radio's RX History.
+        It needs the <code>APRS.APP</code> SD app, which is <strong>not in this bundle yet</strong> &mdash; it is based on code by SQ6QV
+        and will be published when its author states a licence. Without it the APRS choice does nothing.</li>
+    </ul>
+
+    <h3>How to use it</h3>
+    <ol>
+      <li>Patch the official <code>.dat</code> above and install it with Icom's normal SD-card firmware update.</li>
+      <li>Unzip the bundle for your radio and copy <strong>all</strong> its files to the <code>Apps</code> folder of the SD card
+        (<code>\IC-705\Apps\</code> or <code>\IC-9700\Apps\</code>), replacing older ones. The <code>.BIN</code> files work only with the
+        matching firmware. IC-9700: power-cycle the radio afterwards.</li>
+      <li>Set your own callsign and Maidenhead locator on the radio (MY call, GPS position or manual). The firmware carries no personal data.</li>
+      <li>To transmit, the radio needs: <em>USB-D</em> mode, <em>DATA MOD = WLAN</em> (IC-705), the SD card inserted, no remote (LAN) session,
+        and its clock locked to the second (the app waits for it). If something is missing, the DECODE screen says <code>TX refused: &lt;reason&gt;</code>.</li>
+      <li>Start an app in <em>MENU &gt; SET &gt; Apps</em>; decodes appear on the DECODE screen. Each mode's settings are in its <code>.CFG</code> file
+        and in <em>DECODE &gt; SET</em> (submode, PSKREPORT on/off).</li>
+      <li><strong>Beacon:</strong> in a decoder mode, hold the mode tile in the emission popup until a red frame appears and release.</li>
+      <li><strong>CQ:</strong> keep holding past the red frame until it turns green, then release &mdash; CQ in every second period.</li>
+      <li><strong>QSO:</strong> tap a decoded line, wait about a second, tap the proposed <code>TX?</code> line &mdash; the radio sends that one message
+        (<code>QSO: TX armed</code>). One transmission per tap; the radio never advances a QSO by itself. PTT, EXIT or TRANSMIT stop at once.</li>
+      <li>QSOs are appended to <code>Apps\ICAPQSO.ADI</code> (ADIF) for import into your logbook. Spots go to PSKReporter automatically
+        (UDP to report.pskreporter.info) when call, locator and network are present.</li>
+    </ol>
+    <p class="muted">Make the first transmissions on a dummy load. These apps are the project's own code (MIT; the Q65 and JT4 decoders are
+    derived from WSJT-X, GPL-3.0), not Icom software. APRS&reg; is a registered trademark of APRS Software and Bob Bruninga, WB4APR.</p>
   </section>
 
   <section class="card cols" aria-labelledby="how-h">
