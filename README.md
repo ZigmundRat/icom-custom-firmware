@@ -33,8 +33,8 @@ What is new since 20261119v13:
 - **Longer hold for CQ:** the step from the red (beacon) to the green (CQ) frame takes about three times longer.
 - **`TX refused: <reason>`** on the DECODE screen names the condition that blocks a transmission.
 - **APRS GPS TX mode:** MENU > SET > GPS > GPS TX Mode has a 4th choice, APRS — 1200 Bd AFSK position beacon on the
-  current frequency (FM only), received stations go to RX History. It needs the `APRS.APP` SD app, which is not
-  published yet (based on code by SQ6QV; waiting for its licence). Without it the choice does nothing.
+  current frequency (FM only), received stations go to RX History and `Apps\APRS.LOG`. `APRS.APP` is in the SD-apps
+  bundle; the firmware starts and stops it by itself with the menu choice.
 
 How to use it:
 1. Download the official `.dat` from Icom, open the web patcher, select the file and download the patched one
@@ -48,7 +48,9 @@ How to use it:
    - Beacon: in a decoder mode, hold the mode tile in the emission popup until the red frame appears.
    - CQ: keep holding until the frame turns green.
    - QSO: tap a decoded line, wait about 1 s, tap the `TX?` line. One message per tap. PTT, EXIT or TRANSMIT stop at once.
-5. QSOs are appended to `Apps\ICAPQSO.ADI` (ADIF). Spots go to PSKReporter automatically when call, locator and
+5. APRS: set GPS TX Mode to APRS, tune an FM channel (e.g. 144.800 MHz in Europe), set the interval in GPS Auto TX;
+   the beacon needs a valid position (GPS or manual).
+6. QSOs are appended to `Apps\ICAPQSO.ADI` (ADIF). Spots go to PSKReporter automatically when call, locator and
    network are set.
 
 Make the first transmissions on a dummy load.

@@ -39,7 +39,7 @@
           "PTT, EXIT or TRANSMIT end a transmission at once and block further ones until the next deliberate tap",
           "QSOs are logged as ADIF records in Apps\\ICAPQSO.ADI on the SD card (the file is only ever appended to)",
           "If the radio refuses to transmit, the DECODE screen now says why: 'TX refused: <reason>' names the condition that is not met",
-          "APRS (new): MENU > SET > GPS > GPS TX Mode has a 4th choice 'APRS' - position beacon as 1200 Bd AFSK on the current frequency, FM only; received APRS stations appear in the radio's RX History. Needs the APRS.APP SD app, which is NOT in this bundle yet (waiting for its author's licence); without it the choice does nothing",
+          "APRS (new): MENU > SET > GPS > GPS TX Mode has a 4th choice 'APRS' - position beacon as 1200 Bd AFSK on the current frequency, FM only; received APRS stations appear in the radio's RX History. Needs APRS.APP from the SD-apps bundle in \\Apps\\; the loader starts and stops it by itself with the menu choice",
           "NEW FIRMWARE IMAGE in this release: the image and the SD-apps bundle 20261119v14 must be installed TOGETHER (copy ALL files of the bundle to \\IC-9700\\Apps\\, update the firmware, power-cycle). The runtime files ICAPRT / ICAPTX / ICAPSPOT / ICAPCOLD.BIN of this bundle are refused by the older image and the older ones by this image - the radio then runs without apps"
         ],
         "output_md5": "348d1d6118c94e05df0b3027f2dbd103",
@@ -84,7 +84,7 @@
           "PTT, EXIT or TRANSMIT end a transmission at once and block further ones until the next deliberate tap",
           "QSOs are logged as ADIF records in Apps\\ICAPQSO.ADI on the SD card (the file is only ever appended to)",
           "If the radio refuses to transmit, the DECODE screen now says why: 'TX refused: <reason>' names the condition that is not met",
-          "APRS (new): MENU > SET > GPS > GPS TX Mode has a 4th choice 'APRS' - position beacon as 1200 Bd AFSK on the current frequency, FM only; received APRS stations appear in the radio's RX History. Needs the APRS.APP SD app, which is NOT in this bundle yet (waiting for its author's licence); without it the choice does nothing",
+          "APRS (new): MENU > SET > GPS > GPS TX Mode has a 4th choice 'APRS' - position beacon as 1200 Bd AFSK on the current frequency, FM only; received APRS stations appear in the radio's RX History. Needs APRS.APP from the SD-apps bundle in \\Apps\\; the loader starts and stops it by itself with the menu choice",
           "The firmware image and the SD-apps bundle 20261119v14 belong together: download the bundle on the patcher page and copy ALL its files to \\IC-705\\Apps\\ (ICAPSPOT.BIN and ICAPCOLD.BIN are accepted only by this image)"
         ],
         "output_md5": "70af0dea75a3b6cc3c555cbe35d21c36",

@@ -191,7 +191,7 @@
   <section class="card" aria-labelledby="apps-h">
     <h2 id="apps-h">SD-card apps: decoders, beacon, QSO mode, APRS</h2>
     <p>The ICAP releases run digital-mode apps from the SD card: <strong>Q65, FT8, JT4, PI4</strong> and <strong>WSPR</strong>
-    decoders on the radio's DECODE screen (WSJT-X-style output), a beacon, QSO mode and PSKReporter spotting. They are optional &mdash;
+    decoders on the radio's DECODE screen (WSJT-X-style output), a beacon, QSO mode, PSKReporter spotting and APRS. They are optional &mdash;
     the firmware works without them. The firmware image and the bundle belong together: use the bundle with the same release number.</p>
     <ul class="apps-dl">
       <li><a href="apps/ICAP-apps-705E-20261119v14.zip" download>IC-705 E &mdash; SD-apps bundle 20261119v14 (for firmware 20261119v14 only)</a></li>
@@ -207,8 +207,8 @@
       <li><strong>TX refused: &lt;reason&gt;</strong> on the DECODE screen names the condition that blocks a transmission.</li>
       <li><strong>APRS</strong> in the firmware: <em>MENU &gt; SET &gt; GPS &gt; GPS TX Mode</em> has a 4th choice <em>APRS</em> (next to D-PRS / NMEA):
         position beacon as 1200 Bd AFSK on the current frequency, FM only; received APRS stations go to the radio's RX History.
-        It needs the <code>APRS.APP</code> SD app, which is <strong>not in this bundle yet</strong> &mdash; it is based on code by SQ6QV
-        and will be published when its author states a licence. Without it the APRS choice does nothing.</li>
+        It uses <code>APRS.APP</code> from the bundle; the firmware starts and stops it by itself with the menu choice
+        (no need to open it in <em>Apps</em>). Received frames are also written to <code>Apps\APRS.LOG</code>.</li>
     </ul>
 
     <h3>How to use it</h3>
@@ -228,9 +228,11 @@
         (<code>QSO: TX armed</code>). One transmission per tap; the radio never advances a QSO by itself. PTT, EXIT or TRANSMIT stop at once.</li>
       <li>QSOs are appended to <code>Apps\ICAPQSO.ADI</code> (ADIF) for import into your logbook. Spots go to PSKReporter automatically
         (UDP to report.pskreporter.info) when call, locator and network are present.</li>
+      <li><strong>APRS:</strong> set <em>MENU &gt; SET &gt; GPS &gt; GPS TX Mode</em> to <em>APRS</em>, tune an FM channel (e.g. 144.800 MHz in Europe)
+        and set the interval in <em>GPS Auto TX</em>. The beacon needs a valid position (GPS or manual).</li>
     </ol>
-    <p class="muted">Make the first transmissions on a dummy load. These apps are the project's own code (MIT; the Q65 and JT4 decoders are
-    derived from WSJT-X, GPL-3.0), not Icom software. APRS&reg; is a registered trademark of APRS Software and Bob Bruninga, WB4APR.</p>
+    <p class="muted">Make the first transmissions on a dummy load. These apps are the project's own code, not Icom software (decoders: GPL-3.0, partly derived from WSJT-X;
+    APRS: MIT). APRS&reg; is a registered trademark of APRS Software and Bob Bruninga, WB4APR.</p>
   </section>
 
   <section class="card cols" aria-labelledby="how-h">
